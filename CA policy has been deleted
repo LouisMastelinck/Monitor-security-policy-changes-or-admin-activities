@@ -1,0 +1,7 @@
+AuditLogs
+| where OperationName contains "Delete Policy"
+| where Result == "success"
+| where Resource == "Microsoft.aadiam"
+| extend Actor = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)
+| extend DeletedCaPolicy = tostring(TargetResources[0].displayName)
+| project TimeGenerated, Actor, action = AADOperationType, DeletedCaPolicy
