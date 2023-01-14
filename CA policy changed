@@ -6,5 +6,23 @@ AuditLogs
 | extend Actor = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)
 | extend NewConditions = todynamic(tostring(parse_json(tostring(parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue)).conditions))))
 | extend OldConditions = todynamic(tostring(parse_json(tostring(parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].oldValue)).conditions))))
-| extend ChangedUser = iff(tostring(OldConditions.users) != tostring(NewConditions.users), "Users have been changed","No users changed")
+//users
+| extend ChangedUser = iff(tostring(OldConditions.users) != tostring(NewConditions.users),  true , false)
+// applications
+| extend ChangedApplications = iff(tostring(OldConditions.applications) != tostring(NewConditions.applications),  true , false)
 | order by TimeGenerated
+// clientAppTypes
+| extend  ChangedClientAppTypes= iff(tostring(OldConditions.clientAppTypes) != tostring(NewConditions.clientAppTypes), true ,false)
+//locations
+| extend ChangedLocations= iff(tostring(OldConditions.locations) != tostring(NewConditions.locations), true , false)
+| order by TimeGenerated
+//platforms
+| extend ChangedPlatforms= iff(tostring(OldConditions.platforms) != tostring(NewConditions.platforms),  true , false)
+//servicePrincipalRiskLevels
+| extend ChangedServicePrincipalRiskLevels= iff(tostring(OldConditions.servicePrincipalRiskLevels) != tostring(NewConditions.servicePrincipalRiskLevels),  true , false)
+// SignInRiskLevels
+| extend ChangedSignInRiskLevels= iff(tostring(OldConditions.signInRiskLevels) != tostring(NewConditions.signInRiskLevels),  true , false)
+//userRiskLevels
+| extend ChangedUserRiskLevels= iff(tostring(OldConditions.userRiskLevels) != tostring(NewConditions.userRiskLevels),  true , false)
+| where ChangedUser or ChangedApplications or ChangedClientAppTypes or ChangedLocations or ChangedPlatforms or ChangedServicePrincipalRiskLevels or ChangedSignInRiskLevels or ChangedUserRiskLevels
+| project TimeGenerated, Actor, ChangedCaPolicy, ChangedUser, ChangedApplications, ChangedLocations, ChangedPlatforms, ChangedServicePrincipalRiskLevels, ChangedSignInRiskLevels, ChangedUserRiskLevels
