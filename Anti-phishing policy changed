@@ -1,0 +1,5 @@
+OfficeActivity
+| where OfficeWorkload == "Exchange"
+| where Operation == "Set-AntiPhishPolicy"
+| extend ChangedPolicy = OfficeObjectId
+| extend Actor = UserId
