@@ -1,0 +1,9 @@
+CloudAppEvents
+| where AccountDisplayName == "Louis Mastelinck"
+| where ActionType == "AdminMailAccess"
+| extend data = RawEventData["ExtendedProperties"]
+| extend OpenedMailbox = data[1].["Value"]
+| extend OpenedEmail = url_decode(tostring(data[2].["Value"]))
+| project AccountDisplayName, ActionType, OpenedMailbox, OpenedEmail
+| join EmailEvents on $left.OpenedEmail == $right.InternetMessageId
+| project Actor = AccountDisplayName, ActionType, OpenedMailbox, SenderFromAddress, RecipientEmailAddress, Subject
