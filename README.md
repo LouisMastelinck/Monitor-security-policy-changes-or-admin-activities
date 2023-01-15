@@ -28,7 +28,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Anti-malware Policy has been created :x:
 - Safe attachments Policy has been changed :x:
 - Safe attachments Policy has been created :x:
- Safe attachments Policy has been deleted :x:
+- Safe attachments Policy has been deleted :x:
 - Safe links Policy has been changed :x:
 - Safe link Policy has been created :x:
 - Safe links Policy has been deleted :x:
