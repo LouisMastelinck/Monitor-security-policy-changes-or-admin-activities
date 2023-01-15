@@ -32,4 +32,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Preview email via the threat explorer :heavy_check_mark:
 - Download email via the threat explorer :x:
 
+## Echange online
+- creation of a transportrule :heavy_check_mark:
+
 
