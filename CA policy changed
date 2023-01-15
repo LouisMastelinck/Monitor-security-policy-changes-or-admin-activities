@@ -4,8 +4,14 @@ AuditLogs
 | where Result  == "success"
 | extend ChangedCaPolicy = tostring(TargetResources[0].displayName)
 | extend Actor = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)
-| extend NewConditions = todynamic(tostring(parse_json(tostring(parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue)).conditions))))
-| extend OldConditions = todynamic(tostring(parse_json(tostring(parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].oldValue)).conditions))))
+// get the general settings of the NEW CA policy
+| extend NewGeneralSettings = parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue))
+// get the general setting of the OLD CA policy
+| extend OldGeneralSettings = parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].oldValue))
+// get the new conditions
+| extend NewConditions = parse_json(tostring(parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue)).conditions))
+// get the old conditions
+| extend OldConditions = parse_json(tostring(parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].oldValue)).conditions))
 //users
 | extend ChangedUser = iff(tostring(OldConditions.users) != tostring(NewConditions.users),  true , false)
 // applications
@@ -24,5 +30,13 @@ AuditLogs
 | extend ChangedSignInRiskLevels= iff(tostring(OldConditions.signInRiskLevels) != tostring(NewConditions.signInRiskLevels),  true , false)
 //userRiskLevels
 | extend ChangedUserRiskLevels= iff(tostring(OldConditions.userRiskLevels) != tostring(NewConditions.userRiskLevels),  true , false)
-| where ChangedUser or ChangedApplications or ChangedClientAppTypes or ChangedLocations or ChangedPlatforms or ChangedServicePrincipalRiskLevels or ChangedSignInRiskLevels or ChangedUserRiskLevels
-| project TimeGenerated, Actor, ChangedCaPolicy, ChangedUser, ChangedApplications, ChangedLocations, ChangedPlatforms, ChangedServicePrincipalRiskLevels, ChangedSignInRiskLevels, ChangedUserRiskLevels
+// grantcontrols
+| extend ChangedGrantControl = iff(tostring(OldGeneralSettings.grantControls) != tostring(NewGeneralSettings.grantControls),  true , false)
+// state (policy enabled or not)
+| extend ChangedState = iff(tostring(OldGeneralSettings.state) != tostring(NewGeneralSettings.state),  true , false)
+// sessionControl
+| extend ChangedSessionControl = iff(tostring(OldGeneralSettings.sessionControls) != tostring(NewGeneralSettings.sessionControls),  true , false)
+| where ChangedUser or ChangedApplications or ChangedClientAppTypes or ChangedLocations or ChangedPlatforms or ChangedServicePrincipalRiskLevels or ChangedSignInRiskLevels or ChangedUserRiskLevels or ChangedGrantControl or ChangedState or ChangedSessionControl
+| project TimeGenerated, Actor, ChangedCaPolicy, ChangedUser, ChangedApplications, ChangedLocations, ChangedPlatforms, ChangedServicePrincipalRiskLevels, ChangedSignInRiskLevels, ChangedUserRiskLevels, ChangedGrantControl, ChangedState, ChangedSessionControl
+
+
