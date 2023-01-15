@@ -1,6 +1,9 @@
-# Monitor inside threats
+# Monitor critical security policy changes 
 
-The following repo contains detection rules and the original KQL for following scenario's
+The following repo contains detection rules for changes to your critical security policies. 
+In reality security policies are often changes by administrators who want to fix a specific problem.
+These changes either become forgotten, have a way bigger security impact thant the administrator might and open up a your organisations defensive measures.
+
 
 ## Azure Active Directory
 - Conditional access rule disabled 
