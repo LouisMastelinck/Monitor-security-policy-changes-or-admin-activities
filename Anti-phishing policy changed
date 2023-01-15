@@ -3,3 +3,4 @@ OfficeActivity
 | where Operation == "Set-AntiPhishPolicy"
 | extend ChangedPolicy = OfficeObjectId
 | extend Actor = UserId
+| project TimeGenerated, Actor, ChangedPolicy
