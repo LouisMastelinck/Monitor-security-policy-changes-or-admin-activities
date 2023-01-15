@@ -12,26 +12,26 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 
 
 ### Azure Active Directory
-- Conditional access rule has been deleted :x:
-- conditional access rule has been created :x:
-- Conditional access rule disabled :x:
-- Conditional access rule changed :heavy_check_mark:
+- Conditional Access rule has been deleted :x:
+- Conditional Access rule has been created :x:
+- Conditional Access rule disabled :x:
+- Conditional Access rule changed :heavy_check_mark:
 
 ### Microsft Defender for Office
-- Anti-phish policy has been changed :heavy_check_mark:
-- Anti-phish policy has been created :x:
-- Anti-phish policy has been deleted :x:
-- Anti-spam Policy has been changed :x:
+- Anti-Phish policy has been changed :heavy_check_mark:
+- Anti-Phish policy has been created :x:
+- Anti-Phish policy has been deleted :x:
+- Anti-Spam Policy has been changed :x:
 - Anti-Spam Policy has been created :heavy_check_mark:
-- Anti-spam Policy has been deleted :x:
-- Anti-malware Policy has been changed :x:
-- Anti-malware Policy has been created :x:
-- Safe attachments Policy has been changed :x:
-- Safe attachments Policy has been created :x:
-- Safe attachments Policy has been deleted :x:
-- Safe links Policy has been changed :x:
+- Anti-Spam Policy has been deleted :x:
+- Anti-Malware Policy has been changed :x:
+- Anti-Malware Policy has been created :x:
+- Safe Attachments Policy has been changed :x:
+- Safe Attachments Policy has been created :x:
+- Safe Attachments Policy has been deleted :x:
+- Safe Link Policy has been changed :x:
 - Safe link Policy has been created :x:
-- Safe links Policy has been deleted :x:
+- Safe Link Policy has been deleted :x:
 - Tenant added to block list :x:
 - Tenant removed from block :x:
 
