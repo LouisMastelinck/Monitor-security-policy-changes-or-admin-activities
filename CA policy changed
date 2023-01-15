@@ -36,6 +36,7 @@ AuditLogs
 | extend ChangedState = iff(tostring(OldGeneralSettings.state) != tostring(NewGeneralSettings.state),  true , false)
 // sessionControl
 | extend ChangedSessionControl = iff(tostring(OldGeneralSettings.sessionControls) != tostring(NewGeneralSettings.sessionControls),  true , false)
+// show CA policy changes that were True
 | where ChangedUser or ChangedApplications or ChangedClientAppTypes or ChangedLocations or ChangedPlatforms or ChangedServicePrincipalRiskLevels or ChangedSignInRiskLevels or ChangedUserRiskLevels or ChangedGrantControl or ChangedState or ChangedSessionControl
 | project TimeGenerated, Actor, ChangedCaPolicy, ChangedUser, ChangedApplications, ChangedLocations, ChangedPlatforms, ChangedServicePrincipalRiskLevels, ChangedSignInRiskLevels, ChangedUserRiskLevels, ChangedGrantControl, ChangedState, ChangedSessionControl
 
