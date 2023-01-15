@@ -39,6 +39,6 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Download email via the threat explorer :x:
 
 ## Exchange online
-- creation of a transportrule :heavy_check_mark:
+- creation of a transport rule :heavy_check_mark:
 
 
