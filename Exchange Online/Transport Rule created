@@ -1,0 +1,8 @@
+OfficeActivity
+| where Operation == "New-TransportRule"
+| where OfficeWorkload == "Exchange"
+| where ResultStatus == "True"
+| extend Actor = UserId
+| extend TransportRuleSettings = todynamic(Parameters)
+| extend createdTransportRule = TransportRuleSettings[0].Value
+| project TimeGenerated, Actor, createdTransportRule, TransportRuleSettings
