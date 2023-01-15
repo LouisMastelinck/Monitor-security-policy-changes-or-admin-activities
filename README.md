@@ -21,7 +21,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Anti-spam Policy has been changed :x:
 - Anti-Spam Policy has been created :heavy_check_mark:
 - Anti-malware Policy has been changed :x:
-- Anti-mawlare Policy has been created :x:
+- Anti-malware Policy has been created :x:
 - Safe attachments Policy has been changed :x:
 - Safe attachments Policy has been created :x:
 - Safe links Policy has been changed :x:
