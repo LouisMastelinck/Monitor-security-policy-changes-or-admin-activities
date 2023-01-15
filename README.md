@@ -1,4 +1,4 @@
-# Monitor critical security policy changes 
+# Monitor critical security actions 
 
 ## Policy changes
 The following repo contains detection rules for changes to your critical security policies. 
