@@ -1,0 +1,8 @@
+AuditLogs
+| where SourceSystem == "Azure AD"
+| where OperationName == "Add conditional access policy"
+| where Result == "success"
+| extend Actor = InitiatedBy.user.userPrincipalName
+| extend CreatedCAPolicy = TargetResources[0].displayName
+| extend CAPolicySettings = TargetResources[0].modifiedProperties[0].newValue
+| project TimeGenerated, Actor, CreatedCAPolicy, CAPolicySettings
