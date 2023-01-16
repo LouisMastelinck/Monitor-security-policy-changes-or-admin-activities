@@ -1,4 +1,7 @@
 AuditLogs
 | where OperationName == "Update authorization policy"
+| where SourceSystem  == "Azure AD"
+| extend Actor = InitiatedBy.user.userPrincipalName
 | extend UserConsentSetting = parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue))[0] 
-| extend testvalue = iff( parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue))[0] == "","Admin consent is active","Admin is not active!")
+| extend EnterpriseConsentSetting = iff( parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue))[0] == "","Admin consent is activated","Admin consent is not active!")
+| project TimeGenerated, Actor,  EnterpriseConsentSetting
