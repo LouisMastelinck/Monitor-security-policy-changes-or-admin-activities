@@ -1,0 +1,8 @@
+OfficeActivity
+| where SourceSystem == "OfficeActivityManager"
+| where RecordType == "ExchangeAdmin"
+| where ResultStatus == "True"
+| where Operation == "New-TenantAllowBlockListItems"
+| extend Actor = "UserId"
+| extend BlockedDomains = parse_json(Parameters)[0].Value
+| project TimeGenerated, Actor, BlockedDomains
