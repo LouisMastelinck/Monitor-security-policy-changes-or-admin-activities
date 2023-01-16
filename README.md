@@ -12,7 +12,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 
 
 ### Azure Active Directory
-- Conditional Access rule has been deleted :x:
+- Conditional Access rule has been deleted :heavy_check_mark:
 - Conditional Access rule has been created :heavy_check_mark:
 - Conditional Access rule disabled /enabled :heavy_check_mark:
 - Conditional Access rule changed :heavy_check_mark:
