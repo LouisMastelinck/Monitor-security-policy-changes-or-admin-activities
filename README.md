@@ -16,6 +16,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Conditional Access rule has been created :x:
 - Conditional Access rule disabled :x:
 - Conditional Access rule changed :heavy_check_mark:
+- Enterprise applications, admin consent settings is changed :heavy_check_mark:
 
 ### Microsft Defender for Office
 - Anti-Phish policy has been changed :heavy_check_mark:
