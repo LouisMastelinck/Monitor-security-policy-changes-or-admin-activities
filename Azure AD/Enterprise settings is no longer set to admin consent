@@ -1,0 +1,4 @@
+AuditLogs
+| where OperationName == "Update authorization policy"
+| extend UserConsentSetting = parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue))[0] 
+| extend testvalue = iff( parse_json(tostring(parse_json(tostring(TargetResources[0].modifiedProperties))[0].newValue))[0] == "","Admin consent is active","Admin is not active!")
