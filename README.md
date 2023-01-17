@@ -34,7 +34,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Safe link Policy has been created :x:
 - Safe Link Policy has been deleted :x:
 - Tenant added to block list :heavy_check_mark:
-- Tenant removed from block :x:
+- Tenant removed from block list 🐛
 
 - Preview email via the threat explorer :heavy_check_mark:
 - Download email via the threat explorer :x:
