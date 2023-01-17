@@ -1,8 +1,7 @@
-//new anti spam rule created
 OfficeActivity
 | where OfficeWorkload == "Exchange"
 | where Operation == "New-HostedContentFilterPolicy"
-| extend CreatedPolicy = OfficeObjectId
+| extend CreatedPolicy = split(OfficeObjectId, "\\",1)
 | extend Actor = UserId
 | extend Settings = todynamic(Parameters)
 | project TimeGenerated, Actor, CreatedPolicy, Settings
