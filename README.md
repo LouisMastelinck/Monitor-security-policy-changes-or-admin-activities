@@ -24,9 +24,10 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Anti-Phish policy has been deleted :heavy_check_mark:
 - Anti-Spam Policy has been changed :heavy_check_mark:
 - Anti-Spam Policy has been created :heavy_check_mark:
-- Anti-Spam Policy has been deleted :x:
-- Anti-Malware Policy has been changed :x:
-- Anti-Malware Policy has been created :x:
+- Anti-Spam Policy has been deleted :heavy_check_mark:
+- Anti-Malware Policy has been changed :heavy_check_mark:
+- Anti-Malware Policy has been created :heavy_check_mark:
+- Anti-Malware Policy has been removed :heavy_check_mark:
 - Safe Attachments Policy has been changed :x:
 - Safe Attachments Policy has been created :x:
 - Safe Attachments Policy has been deleted :x:
