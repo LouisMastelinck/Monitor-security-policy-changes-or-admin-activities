@@ -21,8 +21,8 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 ### Microsft Defender for Office
 - Anti-Phish policy has been changed :heavy_check_mark:
 - Anti-Phish policy has been created  :heavy_check_mark:
-- Anti-Phish policy has been deleted :x:
-- Anti-Spam Policy has been changed :x:
+- Anti-Phish policy has been deleted :heavy_check_mark:
+- Anti-Spam Policy has been changed :heavy_check_mark:
 - Anti-Spam Policy has been created :heavy_check_mark:
 - Anti-Spam Policy has been deleted :x:
 - Anti-Malware Policy has been changed :x:
