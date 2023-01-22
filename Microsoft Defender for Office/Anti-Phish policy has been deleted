@@ -1,0 +1,7 @@
+OfficeActivity
+| where OfficeWorkload == "Exchange"
+| where Operation == "Remove-AntiPhishPolicy"
+| extend RemoveddPolicy = split(OfficeObjectId,"\\",1)
+| extend Actor = UserId
+| extend Settings = todynamic(Parameters)
+| project TimeGenerated, Actor, RemoveddPolicy, Settings
