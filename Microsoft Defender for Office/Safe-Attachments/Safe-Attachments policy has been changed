@@ -1,0 +1,7 @@
+OfficeActivity
+| where OfficeWorkload == "Exchange"
+| where Operation == "Set-SafeAttachmentPolicy"
+| extend RemovedPolicy = OfficeObjectId
+| extend Actor = UserId
+| extend Settings = todynamic(Parameters)
+| project TimeGenerated, Actor, RemovedPolicy, Settings
