@@ -42,7 +42,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 ## Exchange online
 - Creation of a transport rule :heavy_check_mark:
 
-🐛bugs🐛
+## bugs🐛
 - Tenant removed from block list does not contain a clear value of the domain/tenant removed from the list
 
 
