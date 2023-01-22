@@ -29,7 +29,7 @@ In the wrong hand (insider threat), this legitemate securit could be easily abus
 - Anti-Malware Policy has been created :heavy_check_mark:
 - Anti-Malware Policy has been removed :heavy_check_mark:
 - Safe Attachments Policy has been changed :x:
-- Safe Attachments Policy has been created :x:
+- Safe Attachments Policy has been created :heavy_check_mark:
 - Safe Attachments Policy has been deleted :x:
 - Safe Link Policy has been changed :x:
 - Safe link Policy has been created :x:
