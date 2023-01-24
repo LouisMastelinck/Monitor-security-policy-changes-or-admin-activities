@@ -34,9 +34,9 @@ You can use the following KQL rules to create your own alerting.
 - Safe Attachments Policy has been changed :heavy_check_mark:
 - Safe Attachments Policy has been created :heavy_check_mark:
 - Safe Attachments Policy has been deleted :heavy_check_mark:
-- Safe Link Policy has been changed :x:
-- Safe Link Policy has been created :x:
-- Safe Link Policy has been deleted :x:
+- Safe Link Policy has been changed :heavy_check_mark:
+- Safe Link Policy has been created :heavy_check_mark:
+- Safe Link Policy has been deleted :heavy_check_mark:
 - Tenant added to block list :heavy_check_mark:
 - Tenant removed from block list 🐛
 
