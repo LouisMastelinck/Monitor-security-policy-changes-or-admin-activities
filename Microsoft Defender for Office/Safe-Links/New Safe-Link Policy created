@@ -1,0 +1,7 @@
+OfficeActivity
+| where OfficeWorkload == "Exchange"
+| where Operation == "New-SafeLinksPolicy"
+| extend CreatedPolicy = split(OfficeObjectId,"\\",1)
+| extend Actor = UserId
+| extend Settings = todynamic(Parameters)
+| project TimeGenerated, Actor, CreatedPolicy, Settings
