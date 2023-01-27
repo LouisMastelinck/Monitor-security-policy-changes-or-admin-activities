@@ -50,3 +50,7 @@ You can use the following KQL rules to create your own alerting.
 - Tenant removed from block list does not contain a clear value of the domain/tenant removed from the list
 
 
+## to develop
+- searches performed via the threatexplorer
+
+
