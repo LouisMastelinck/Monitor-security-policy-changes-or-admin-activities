@@ -3,6 +3,6 @@ AuditLogs
 | where OperationName == "Delete conditional access policy"
 | where Result == "success"
 | extend Actor = InitiatedBy.user.userPrincipalName
-| extend CreatedCAPolicy = TargetResources[0].displayName
+| extend DeletedCAPolicy = TargetResources[0].displayName
 | extend CAPolicySettings = TargetResources[0].modifiedProperties[0].oldValue
-| project TimeGenerated, Actor, CreatedCAPolicy, CAPolicySettings
+| project TimeGenerated, Actor, DeletedCAPolicy, CAPolicySettings
