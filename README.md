@@ -14,7 +14,7 @@ You can use the following KQL rules to create your own alerting.
 - Conditional Access rule has been created :heavy_check_mark:
 - Conditional Access rule disabled /enabled :heavy_check_mark:
 - Conditional Access rule changed :heavy_check_mark:
-- Enterprise applications, admin consent settings is changed :heavy_check_mark:
+- Enterprise applications, admin consent settings is changed :construction_worker:
 
 ### Microsft Defender for Office
 - Anti-Phish policy has been changed :heavy_check_mark:
@@ -44,6 +44,6 @@ You can use the following KQL rules to create your own alerting.
 
 
 ## To develop
-- searches performed via the threatexplorer
+- searches performed via the threatexplorer :mag_right:
 
 
