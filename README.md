@@ -39,11 +39,11 @@ You can use the following KQL rules to create your own alerting.
 ## Exchange online
 - Creation of a transport rule :heavy_check_mark:
 
-## bugs🐛
+## Bugs🐛
 - Tenant removed from block list does not contain a clear value of the domain/tenant removed from the list
 
 
-## to develop
+## To develop
 - searches performed via the threatexplorer
 
 
