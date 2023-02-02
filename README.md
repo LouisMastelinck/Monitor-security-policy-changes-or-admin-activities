@@ -3,7 +3,7 @@
 ## Policy changes
 The following repo contains detection rules for changes to your critical security policies. 
 In reality, security policies are often changed by administrators who want to fix a specific problem.
-These changes either become forgotten, have a way bigger security impact than the administrator might, or open up your organisations' defensive measures.
+These changes either become forgotten, have a way bigger security impact than the administrator might intend, or open up your organisations' defensive measures.
 
 You can find these actions in the logs, but Microsoft doesn't provide alerting by default to these actions. 
 You can use the following KQL rules to create your own alerting. 
