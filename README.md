@@ -40,8 +40,6 @@ You can use the following KQL rules to create your own alerting.
 - Tenant added to block list :heavy_check_mark:
 - Tenant removed from block list 🐛
 
-- Preview email via the threat explorer :heavy_check_mark:
-- Download email via the threat explorer :x:
 
 ## Exchange online
 - Creation of a transport rule :heavy_check_mark:
