@@ -43,7 +43,7 @@ You can use the following KQL rules to create your own alerting.
 - Tenant removed from block list does not contain a clear value of the domain/tenant removed from the list
 
 
-## To develop
-- searches performed via the threatexplorer :mag_right:
+## Threat explorer
+- searches performed via the threatexplorer - https://www.lousec.be/mdo/malicious-admin-reading-your-emails/
 
 
